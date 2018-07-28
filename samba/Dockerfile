@@ -13,4 +13,6 @@ COPY smb.conf /etc/
 
 RUN chmod a+x /run.sh
 
+ENTRYPOINT ["/usr/bin/env"]
+
 CMD [ "/run.sh" ]
