@@ -3,12 +3,14 @@ set -e
 
 # Mount drive
 echo "[Info] Mount drive /dev/sda1 ..."
-mount --bind /dev/sda1 /share
+mkdir /share/test
+mount /dev/sda1 /share/test
+mount --bind /share/test addons
 echo "[Info] /dev/sda1 Done!!!"
 ls /share
 
 while true; do
     echo "[Info] heart beat!!!"
     sleep 30
-    ls share
+    ls share/test
 done
