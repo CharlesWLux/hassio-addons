@@ -3,10 +3,9 @@ set -e
 
 # Mount drive
 echo "[Info] Mount drive /dev/sda1 ..."
-#mkdir share/test
-mount /dev/sda1 share/test
+mount /dev/sda1 /share
 echo "[Info] /dev/sda1 Done!!!"
-ls share/test
+ls /share
 
 while true; do
     echo "[Info] heart beat!!!"
