@@ -4,6 +4,11 @@ set -e
 # Mount drive
 echo "[Info] Mount drive /dev/sda1 ..."
 #mkdir share/test
-mount share/sda1 share/test
+mount /dev/sda1 share/test
 echo "[Info] /dev/sda1 Done!!!"
 ls share/test
+
+while true; do
+    echo "[Info] heart beat!!!"
+    sleep 300
+done
