@@ -3,6 +3,7 @@ set -e
 
 # Mount drive
 echo "[Info] Mount drive /dev/sda1 ..."
-mount /dev/sda1 share
+mkdir share/test
+mount /dev/sda1 share/test
 echo "[Info] /dev/sda1 Done!!!"
-ls share
+ls share/test
