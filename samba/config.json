@@ -1,0 +1,56 @@
+{
+  "name": "Samba share",
+  "version": "4.1",
+  "slug": "samba",
+  "description": "Expose Hass.io folders with SMB/CIFS",
+  "url": "https://home-assistant.io/addons/samba/",
+  "startup": "services",
+  "boot": "auto",
+  "host_network": true,
+  "devices": ["/dev/sda1:/dev/sda1:rwm"],
+  "privileged": [
+    "NET_ADMIN",
+    "SYS_ADMIN",
+    "SYS_RAWIO",
+    "SYS_TIME",
+    "SYS_NICE"
+  ],
+  "map": ["config:rw", "ssl:rw", "addons:rw", "share:rw", "backup:rw"],
+  "options": {
+    "workgroup": "WORKGROUP",
+    "name": "hassio",
+    "guest": true,
+    "map": {
+      "config": true,
+      "addons": true,
+      "ssl": false,
+      "share": true,
+      "backup": true
+    },
+    "username": "",
+    "password": "",
+    "interface": "",
+    "allow_hosts": [
+        "10.0.0.0/8",
+        "172.16.0.0/12",
+        "192.168.0.0/16"
+    ]
+  },
+  "schema": {
+    "workgroup": "str",
+    "name": "str",
+    "guest": "bool",
+    "map": {
+      "config": "bool",
+      "addons": "bool",
+      "ssl": "bool",
+      "share": "bool",
+      "backup": "bool"
+    },
+    "username": "str",
+    "password": "str",
+    "interface": "str",
+    "allow_hosts": ["str"]
+  },
+  "image": "homeassistant/{arch}-addon-samba"
+}
