@@ -7,7 +7,7 @@
   "startup": "services",
   "boot": "auto",
   "host_network": true,
-  "devices": ["/dev/sda1:/dev/sda1:rwm"],
+  "devices": ["/dev/sda1:share:rwm"],
   "privileged": [
     "NET_ADMIN",
     "SYS_ADMIN",
@@ -51,5 +51,5 @@
     "password": "str",
     "interface": "str",
     "allow_hosts": ["str"]
-  } 
+  }
 }
