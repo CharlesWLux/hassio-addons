@@ -33,9 +33,9 @@ echo "Mount drive /dev/sdb1 (HD1)..."
 mount /dev/sdb1 $DIRHD1
 echo "/dev/sdb1 (HD1) Done!!!"
 
-echo "Mount drive /dev/sdb2 (HD2)..."
-mount /dev/sdb2 $DIRHD2
-echo "/dev/sdb2 (HD2) Done!!!"
+#echo "Mount drive /dev/sdb2 (HD2)..."
+#mount /dev/sdb2 $DIRHD2
+#echo "/dev/sdb2 (HD2) Done!!!"
 
 echo "Mount drive /dev/sdb3 (HD3)..."
 mount /dev/sdb3 $DIRHD3
