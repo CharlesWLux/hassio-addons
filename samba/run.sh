@@ -4,7 +4,6 @@ set -e
 # Mount drive
 echo "[Info] Mount drive /dev/sda1 ..."
 mount /dev/sda1 /share
-mkdir /mnt
 echo "test" >> /mnt/test.txt
 mount --bind /mnt /share
 echo "[Info] /dev/sda1 Done!!!"
