@@ -3,13 +3,15 @@ set -e
 
 # Mount drive
 echo "[Info] Mount drive /dev/sda1 ..."
-mkdir /usr/share/hassio/share
-mount /dev/sda1 /usr/share/hassio/share
+mount /dev/sda1 /share
+mkdir /mnt
+echo "test" >> /mnt/test.txt
+mount --bind /mnt /share
 echo "[Info] /dev/sda1 Done!!!"
-ls /usr/share/hassio/share
+ls /share
 
 while true; do
     echo "[Info] heart beat!!!"
     sleep 30
-    ls /usr/share/hassio/share
+    ls /share
 done
