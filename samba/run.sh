@@ -25,21 +25,21 @@ if [ ! -d $DIRHD3 ]; then
   mkdir $DIRHD3
 fi
 
-echo "Mount drive /dev/sda1 (USBKEY)..."
-mount /dev/sda1 $DIRUSBKEY
-echo "/dev/sda1 (DIRUSBKEY) Done!!!"
+echo "Mount drive /dev/sdb1 (USBKEY)..."
+mount /dev/sdb1 $DIRUSBKEY
+echo "/dev/sdb1 (DIRUSBKEY) Done!!!"
 
-echo "Mount drive /dev/sdb1 (HD1)..."
-mount /dev/sdb1 $DIRHD1
-echo "/dev/sdb1 (HD1) Done!!!"
+echo "Mount drive /dev/sda1 (HD1)..."
+mount /dev/sda1 $DIRHD1
+echo "/dev/sda1 (HD1) Done!!!"
 
 #echo "Mount drive /dev/sdb2 (HD2)..."
 #mount /dev/sdb2 $DIRHD2
 #echo "/dev/sdb2 (HD2) Done!!!"
 
-echo "Mount drive /dev/sdb3 (HD3)..."
-mount /dev/sdb3 $DIRHD3
-echo "/dev/sdb3 (HD3) Done!!!"
+echo "Mount drive /dev/sda3 (HD3)..."
+mount /dev/sda3 $DIRHD3
+echo "/dev/sda3 (HD3) Done!!!"
 
 CONFIG_PATH=/data/options.json
 
