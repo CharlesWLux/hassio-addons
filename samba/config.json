@@ -7,7 +7,7 @@
   "startup": "services",
   "boot": "auto",
   "host_network": true,
-  "devices": ["/dev/sda1:/dev/sda1:rwm", "/dev/sdb1:/dev/sdb1:rwm", "/dev/sdb2:/dev/sdb2:rwm", "/dev/sdb3:/dev/sdb3:rwm"],
+  "devices": ["/dev/sda1:/dev/sda1:rwm", "/dev/sdb1:/dev/sdb1:rwm", "/dev/sda2:/dev/sda2:rwm", "/dev/sda3:/dev/sda3:rwm"],
   "privileged": [
     "NET_ADMIN",
     "SYS_ADMIN",
