@@ -1,17 +1,12 @@
 #!/bin/bash
 set -e
 
-DIRUSBKEY="share/usbkey"
 DIRHD1="share/HD1"
 DIRHD2="share/HD2"
 DIRHD3="share/HD3"
 # Mount drive
 
 ls share
-
-if [ ! -d $DIRUSBKEY ]; then
-  mkdir $DIRUSBKEY
-fi
 
 if [ ! -d $DIRHD1 ]; then
   mkdir $DIRHD1
@@ -24,10 +19,6 @@ fi
 if [ ! -d $DIRHD3 ]; then
   mkdir $DIRHD3
 fi
-
-echo "Mount drive /dev/sdb1 (USBKEY)..."
-mount /dev/sdb1 $DIRUSBKEY
-echo "/dev/sdb1 (DIRUSBKEY) Done!!!"
 
 echo "Mount drive /dev/sda1 (HD1)..."
 mount /dev/sda1 $DIRHD1
